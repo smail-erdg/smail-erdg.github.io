@@ -146,6 +146,14 @@
     gap:60px;
     align-items:center;
   }
+  .avatar{
+    width:96px;height:96px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #fff;
+    box-shadow:0 10px 24px rgba(10,30,60,0.18), 0 0 0 3px rgba(10,102,194,0.15);
+    margin-bottom:18px;
+  }
   .eyebrow{
     display:inline-flex;
     align-items:center;
@@ -342,10 +350,47 @@
     margin-bottom:6px;
   }
   .tl-item.current .tl-dates{color:#a67e00;}
+  .tl-head{display:flex;align-items:flex-start;gap:14px;margin-bottom:12px;}
+  .tl-logo{
+    width:46px;height:46px;
+    border-radius:10px;
+    background:#fff;
+    border:1px solid var(--line);
+    box-shadow:var(--shadow);
+    display:flex;align-items:center;justify-content:center;
+    flex-shrink:0;
+    overflow:hidden;
+  }
+  .tl-logo img{width:70%;height:70%;object-fit:contain;}
+  .tl-logo.tl-logo-mono{
+    background:linear-gradient(135deg,var(--blue),#1488d8);
+    color:#fff;font-weight:800;font-size:15px;letter-spacing:.5px;
+  }
   .tl-item h3{font-size:19px;font-weight:700;margin-bottom:2px;}
-  .tl-company{font-size:14px;font-weight:600;color:var(--muted);margin-bottom:12px;}
+  .tl-company{font-size:14px;font-weight:600;color:var(--muted);margin-bottom:0;}
   .tl-item ul{padding-left:18px;color:var(--muted);font-size:14.5px;}
   .tl-item ul li{margin-bottom:6px;}
+  .cv-header{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:24px 28px;
+    box-shadow:var(--shadow);
+    margin-bottom:40px;
+  }
+  .cv-header img{
+    width:84px;height:84px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #fff;
+    box-shadow:0 0 0 3px rgba(10,102,194,0.15);
+    flex-shrink:0;
+  }
+  .cv-header h3{font-size:20px;font-weight:700;margin-bottom:4px;}
+  .cv-header p{font-size:14px;color:var(--muted);}
   .current-badge{
     display:inline-block;
     font-size:11px;
@@ -451,6 +496,7 @@
 <section class="hero" id="accueil">
   <div class="container hero-grid">
     <div>
+      <img src="assets/profile.jpg" alt="Smail Boutahor" class="avatar">
       <div class="eyebrow"><span class="dot"></span> Disponible pour vos projets Power BI</div>
       <h1>Je transforme la <span class="accent">donnée</span> en décisions pour votre entreprise.</h1>
       <p class="lead">Consultant freelance Power BI &amp; contrôle de gestion, fondateur de <strong>SB BI Solutions</strong>. Je conçois des rapports Power BI orientés décision : modélisation propre, mesures DAX lisibles, et des visuels pensés pour raconter une histoire business.</p>
@@ -638,14 +684,27 @@
     <h2 class="section-title">Expérience, formation &amp; compétences</h2>
     <p class="section-sub">Un parcours construit entre terrain (contrôle de gestion multi-sites) et conseil indépendant en reporting Power BI.</p>
 
+    <div class="cv-header">
+      <img src="assets/profile.jpg" alt="Smail Boutahor">
+      <div>
+        <h3>Smail Boutahor</h3>
+        <p>Contrôleur de Gestion &amp; Consultant Freelance Power BI — Mobilité en France</p>
+      </div>
+    </div>
+
     <div class="parcours-layout">
       <div class="timeline">
 
         <div class="tl-item current">
           <div class="tl-dot"></div>
           <div class="tl-dates">Depuis Sept. 2026 <span class="current-badge">En cours</span></div>
-          <h3>Data Analyst / Contrôleur de Gestion — Alternance</h3>
-          <div class="tl-company">TotalEnergies · Nanterre</div>
+          <div class="tl-head">
+            <div class="tl-logo"><img src="assets/totalenergies-logo.svg" alt="TotalEnergies"></div>
+            <div>
+              <h3>Data Analyst / Contrôleur de Gestion — Alternance</h3>
+              <div class="tl-company">TotalEnergies · Nanterre</div>
+            </div>
+          </div>
           <ul>
             <li>Analyse de données et reporting de gestion au service de la performance financière, avec un fort accent sur les outils Power BI et data.</li>
             <li>Conception et développement de rapports et tableaux de bord Power BI pour le suivi d'indicateurs de gestion.</li>
@@ -657,8 +716,13 @@
         <div class="tl-item">
           <div class="tl-dot"></div>
           <div class="tl-dates">2024 — 2026</div>
-          <h3>Fondateur &amp; Consultant Freelance Power BI</h3>
-          <div class="tl-company">SB BI Solutions · Indépendant</div>
+          <div class="tl-head">
+            <div class="tl-logo tl-logo-mono">SB</div>
+            <div>
+              <h3>Fondateur &amp; Consultant Freelance Power BI</h3>
+              <div class="tl-company">SB BI Solutions · Indépendant</div>
+            </div>
+          </div>
           <ul>
             <li>Conception de rapports Power BI de bout en bout : modélisation de données (star schema), mesures DAX, visuels orientés décision.</li>
             <li>Accompagnement de PME/ETI et de fonctions finance / contrôle de gestion sur leurs projets de reporting et de pilotage de la performance.</li>
@@ -669,8 +733,13 @@
         <div class="tl-item">
           <div class="tl-dot"></div>
           <div class="tl-dates">Sept. 2024 — Août 2026</div>
-          <h3>Contrôleur de Gestion SI — Alternance (2 ans)</h3>
-          <div class="tl-company">Sodexo France · Guyancourt</div>
+          <div class="tl-head">
+            <div class="tl-logo"><img src="assets/sodexo-logo.svg" alt="Sodexo France"></div>
+            <div>
+              <h3>Contrôleur de Gestion SI — Alternance (2 ans)</h3>
+              <div class="tl-company">Sodexo France · Guyancourt</div>
+            </div>
+          </div>
           <ul>
             <li>Déploiement de 15+ reportings Power BI pour 400+ utilisateurs, facilitant le pilotage opérationnel et financier.</li>
             <li>Analyse de la performance financière et des P&amp;L de 50+ sites : CA 400 M€, RBE, marges, frais de personnel, achats et stocks.</li>
