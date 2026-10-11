@@ -140,12 +140,28 @@
   .logo span{color:var(--blue);}
   .nav-links{display:flex;gap:32px;list-style:none;}
   .nav-links a{
+    position:relative;
     font-weight:600;
     font-size:14px;
     color:var(--ink);
     transition:color .2s;
+    padding-bottom:6px;
+  }
+  .nav-links a::after{
+    content:'';
+    position:absolute;
+    left:0;right:0;bottom:0;
+    height:2px;
+    background:var(--blue);
+    border-radius:2px;
+    transform:scaleX(0);
+    transform-origin:center;
+    transition:transform .25s ease;
   }
   .nav-links a:hover{color:var(--blue);}
+  .nav-links a:hover::after{transform:scaleX(1);}
+  .nav-links a.active{color:var(--blue);}
+  .nav-links a.active::after{transform:scaleX(1);}
   .nav-cta{
     background:var(--blue);
     color:#fff !important;
@@ -864,6 +880,38 @@
 <footer class="bottom">
   © 2026 Smail Boutahor — SB BI Solutions. Tous droits réservés.
 </footer>
+
+<script>
+(function(){
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav-links a[href^="#"]'));
+  var sections = navLinks.map(function(link){
+    return document.getElementById(link.getAttribute('href').slice(1));
+  }).filter(Boolean);
+
+  function setActive(id){
+    navLinks.forEach(function(link){
+      link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+    });
+  }
+
+  if('IntersectionObserver' in window && sections.length){
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          setActive(entry.target.id);
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+    sections.forEach(function(section){ observer.observe(section); });
+  }
+
+  navLinks.forEach(function(link){
+    link.addEventListener('click', function(){
+      setActive(link.getAttribute('href').slice(1));
+    });
+  });
+})();
+</script>
 
 </body>
 </html>
