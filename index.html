@@ -526,6 +526,27 @@
     section{padding:64px 0;}
     .hero{padding-top:140px;}
   }
+
+  /* ---------- AVANT / APRÈS ---------- */
+  .ba-tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px;}
+  .ba-tab{font:inherit;font-weight:600;font-size:14px;padding:10px 18px;border-radius:50px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;transition:border-color .2s,color .2s,background .2s;}
+  .ba-tab:hover{border-color:var(--blue);color:var(--blue);}
+  .ba-tab[aria-selected="true"]{background:var(--blue);border-color:var(--blue);color:#fff;}
+  .ba-frame{--p:50%;position:relative;aspect-ratio:16/9;border-radius:var(--radius);overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);user-select:none;}
+  .ba-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .ba-before{clip-path:inset(0 calc(100% - var(--p)) 0 0);}
+  .ba-handle{position:absolute;top:0;bottom:0;left:var(--p);width:3px;margin-left:-1.5px;background:#fff;box-shadow:0 0 0 1px rgba(11,18,32,.25);pointer-events:none;}
+  .ba-handle::after{content:'⟷';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:44px;height:44px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;box-shadow:0 6px 18px rgba(10,30,60,.3);}
+  .ba-label{position:absolute;top:14px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;border-radius:50px;pointer-events:none;}
+  .ba-l{left:14px;background:rgba(11,18,32,.78);color:#fff;}
+  .ba-r{right:14px;background:var(--blue);color:#fff;}
+  .ba-range{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;}
+  .ba-frame:focus-within{outline:3px solid var(--gold);outline-offset:3px;}
+  .ba-info{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-top:22px;}
+  .ba-info p{color:var(--muted);font-size:15px;max-width:700px;margin:0;}
+  .ba-info p b{color:var(--ink);}
+  .project-links{display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
+  @media (max-width: 860px){ .ba-handle::after{width:36px;height:36px;font-size:16px;} .ba-label{top:10px;font-size:11px;} }
 </style>
 </head>
 <body>
@@ -537,6 +558,7 @@
       <li><a href="#accueil">Accueil</a></li>
       <li><a href="#apropos">À propos</a></li>
       <li><a href="#projets">Projets</a></li>
+      <li><a href="#refontes">Avant / Après</a></li>
       <li><a href="#parcours">Parcours</a></li>
     </ul>
     <a href="#contact" class="nav-cta">Me contacter</a>
@@ -622,7 +644,7 @@
     <!-- Project Taxi Pulse -->
     <div class="project-card">
       <div class="project-media">
-        <video src="assets/taxi-pulse.mp4?v=1" autoplay muted loop playsinline preload="metadata" style="width:100%;height:100%;object-fit:contain;border-radius:8px;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"></video>
+        <video data-auto preload="none" poster="assets/posters/taxi-pulse.jpg" src="assets/taxi-pulse.mp4?v=2" muted loop playsinline style="width:100%;height:100%;object-fit:contain;border-radius:8px;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"></video>
         <div class="media-fallback">
           <div class="mf-icon">🚕</div>
           <div class="mf-text">Taxi Pulse<br>(vidéo hébergée sur GitHub)</div>
@@ -637,14 +659,14 @@
         <h3>🚕 Taxi Pulse : où et quand mettre les taxis</h3>
         <p>730 jours de taxis new-yorkais transformés en 3 pages de décision. Une horloge radiale de la tension (7 jours × 24 h) révèle le trou de la relève de 16 h (≈ 1 650 taxis manquants) ; une cascade montre ce que rapporte une course (5,42 $ sur 14,98 $) et un simulateur chiffre les leviers. 60 mesures DAX, 5 visuels Deneb, thème sombre.</p>
         <div class="usecase">📌 Cas d'usage : Responsable de flotte arbitrant le déploiement des taxis par heure et par zone (données réelles journalières, découpages horaires et coûts simulés).</div>
-        <a class="btn btn-primary project-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSfrWSQZopcLOyCkhCkhhUc2MDidY0ayeoxj_7BFFQ1IcIZH8A/viewform" target="_blank" rel="noopener">📩 Recevoir ce rapport</a>
+        <div class="project-links"><a class="btn btn-primary" href="etude-taxi-pulse.html">Lire l'étude de cas →</a><a class="btn btn-ghost" href="https://docs.google.com/forms/d/e/1FAIpQLSfrWSQZopcLOyCkhCkhhUc2MDidY0ayeoxj_7BFFQ1IcIZH8A/viewform" target="_blank" rel="noopener">📩 Recevoir ce rapport</a></div>
       </div>
     </div>
 
     <!-- Project Projeto Vendas Iris -->
     <div class="project-card">
       <div class="project-media">
-        <video src="assets/projeto-vendas-iris.mp4?v=2" autoplay muted loop playsinline preload="metadata" style="width:100%;height:100%;object-fit:contain;border-radius:8px;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"></video>
+        <video data-auto preload="none" poster="assets/posters/projeto-vendas-iris.jpg" src="assets/projeto-vendas-iris.mp4?v=3" muted loop playsinline style="width:100%;height:100%;object-fit:contain;border-radius:8px;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"></video>
         <div class="media-fallback">
           <div class="mf-icon">📊</div>
           <div class="mf-text">Projeto Vendas Iris<br>(vidéo hébergée sur GitHub)</div>
@@ -657,16 +679,16 @@
           <span class="tag tag-cat">Pilotage commercial</span>
         </div>
         <h3>🎯 Projeto Vendas Iris : cockpit commercial</h3>
-        <p>Refonte d'un rapport de vente de 22 pages en 6 pages, chacune répondant à une seule question. Décomposition prix / volume / mix, carte de chaleur, quadrant objectif × N-1 et scorecard avec priorités d'action. 77 mesures DAX, un groupe de calcul Mois / Trimestre / Année et 4 visuels Deneb.</p>
+        <p>Refonte d'un tableau de bord de vente surchargé en 6 pages, chacune répondant à une seule question. Décomposition prix / volume / mix, carte de chaleur, quadrant objectif × N-1 et scorecard avec priorités d'action. 77 mesures DAX, un groupe de calcul Mois / Trimestre / Année et 4 visuels Deneb.</p>
         <div class="usecase">📌 Cas d'usage : Direction commerciale suivant le CA, l'atteinte des objectifs et la progression par vendeur (données de démonstration).</div>
-        <a class="btn btn-primary project-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSfrWSQZopcLOyCkhCkhhUc2MDidY0ayeoxj_7BFFQ1IcIZH8A/viewform" target="_blank" rel="noopener">📩 Recevoir ce rapport</a>
+        <div class="project-links"><a class="btn btn-primary" href="etude-projeto-vendas-iris.html">Lire l'étude de cas →</a><a class="btn btn-ghost" href="https://docs.google.com/forms/d/e/1FAIpQLSfrWSQZopcLOyCkhCkhhUc2MDidY0ayeoxj_7BFFQ1IcIZH8A/viewform" target="_blank" rel="noopener">📩 Recevoir ce rapport</a></div>
       </div>
     </div>
 
     <!-- Project DIAD Champion SB -->
     <div class="project-card">
       <div class="project-media">
-        <video src="assets/DIAD_Champion_SB_LinkedIn.mp4" autoplay muted loop playsinline preload="metadata" style="width:100%;height:100%;object-fit:contain;border-radius:8px;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"></video>
+        <video data-auto preload="none" poster="assets/posters/DIAD_Champion_SB_LinkedIn.jpg" src="assets/DIAD_Champion_SB_LinkedIn.mp4" muted loop playsinline style="width:100%;height:100%;object-fit:contain;border-radius:8px;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"></video>
         <div class="media-fallback">
           <div class="mf-icon">📊</div>
           <div class="mf-text">DIAD Champion<br>(vidéo hébergée sur GitHub)</div>
@@ -681,14 +703,14 @@
         <h3>🏆 DIAD Champion : refonte du rapport DIAD</h3>
         <p>Refonte visuelle du rapport DIAD de Microsoft, sans toucher au modèle (Sales, PY Sales, % Growth, Market Share). KPI en SVG générés en DAX, vert/rouge réservés aux écarts ▲▼ et une phrase d'analyse qui se met à jour avec les filtres. 4 pages : Accueil, Marché, Fabricant, Pays.</p>
         <div class="usecase">📌 Cas d'usage : Direction commerciale suivant sa part de marché face aux concurrents (données de démonstration).</div>
-        <a class="btn btn-primary project-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSfrWSQZopcLOyCkhCkhhUc2MDidY0ayeoxj_7BFFQ1IcIZH8A/viewform" target="_blank" rel="noopener">📩 Recevoir ce rapport</a>
+        <div class="project-links"><a class="btn btn-primary" href="etude-diad-champion.html">Lire l'étude de cas →</a><a class="btn btn-ghost" href="https://docs.google.com/forms/d/e/1FAIpQLSfrWSQZopcLOyCkhCkhhUc2MDidY0ayeoxj_7BFFQ1IcIZH8A/viewform" target="_blank" rel="noopener">📩 Recevoir ce rapport</a></div>
       </div>
     </div>
 
     <!-- Project 1 -->
     <div class="project-card">
       <div class="project-media">
-        <video src="assets/finance-campaign-analysis.mp4" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:contain;border-radius:8px;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"></video>
+        <video data-auto preload="none" poster="assets/posters/finance-campaign-analysis.jpg" src="assets/finance-campaign-analysis.mp4" muted loop playsinline style="width:100%;height:100%;object-fit:contain;border-radius:8px;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"></video>
         <div class="media-fallback">
           <div class="mf-icon">📊</div>
           <div class="mf-text">Finance & Campaign Analysis<br>(image hébergée sur GitHub)</div>
@@ -710,7 +732,7 @@
     <!-- Project 2 -->
     <div class="project-card">
       <div class="project-media">
-        <video src="assets/crypto-dashboard.mp4" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:contain;border-radius:8px;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"></video>
+        <video data-auto preload="none" poster="assets/posters/crypto-dashboard.jpg" src="assets/crypto-dashboard.mp4" muted loop playsinline style="width:100%;height:100%;object-fit:contain;border-radius:8px;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"></video>
         <div class="media-fallback">
           <div class="mf-icon">📊</div>
           <div class="mf-text">Crypto Dashboard<br>(image hébergée sur GitHub)</div>
@@ -732,7 +754,7 @@
     <!-- Project 3 -->
     <div class="project-card">
       <div class="project-media">
-        <video src="assets/housing-market-analysis.mp4" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:contain;border-radius:8px;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"></video>
+        <video data-auto preload="none" poster="assets/posters/housing-market-analysis.jpg" src="assets/housing-market-analysis.mp4" muted loop playsinline style="width:100%;height:100%;object-fit:contain;border-radius:8px;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"></video>
         <div class="media-fallback">
           <div class="mf-icon">📊</div>
           <div class="mf-text">Housing Market Analysis<br>(image hébergée sur GitHub)</div>
@@ -754,7 +776,7 @@
     <!-- Project 4 -->
     <div class="project-card">
       <div class="project-media">
-        <video src="assets/store-sales-dashboard.mp4" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:contain;border-radius:8px;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"></video>
+        <video data-auto preload="none" poster="assets/posters/store-sales-dashboard.jpg" src="assets/store-sales-dashboard.mp4" muted loop playsinline style="width:100%;height:100%;object-fit:contain;border-radius:8px;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"></video>
         <div class="media-fallback">
           <div class="mf-icon">📊</div>
           <div class="mf-text">Store Sales Dashboard<br>(image hébergée sur GitHub)</div>
@@ -776,7 +798,7 @@
     <!-- Project 5 -->
     <div class="project-card">
       <div class="project-media">
-        <video src="assets/hr-analytics-report.mp4" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:contain;border-radius:8px;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"></video>
+        <video data-auto preload="none" poster="assets/posters/hr-analytics-report.jpg" src="assets/hr-analytics-report.mp4" muted loop playsinline style="width:100%;height:100%;object-fit:contain;border-radius:8px;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"></video>
         <div class="media-fallback">
           <div class="mf-icon">📊</div>
           <div class="mf-text">HR Analytics Report<br>(image hébergée sur GitHub)</div>
@@ -795,6 +817,31 @@
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- ================= AVANT / APRÈS ================= -->
+<section id="refontes">
+  <div class="container">
+    <span class="section-tag">Avant / Après</span>
+    <h2 class="section-title">Trois refontes : faites glisser pour comparer</h2>
+    <p class="section-sub">Le même jeu de données, avant et après. À gauche le rapport d'origine, à droite la version repensée pour la décision.</p>
+    <div class="ba-tabs" role="tablist" aria-label="Choisir une refonte">
+      <button class="ba-tab" role="tab" aria-selected="true" data-ba="taxi">🚕 Taxi Pulse</button>
+      <button class="ba-tab" role="tab" aria-selected="false" data-ba="iris">🎯 Projeto Vendas Iris</button>
+      <button class="ba-tab" role="tab" aria-selected="false" data-ba="diad">🏆 DIAD Champion</button>
+    </div>
+    <div class="ba-frame" id="ba-frame">
+      <img class="ba-after" id="ba-after" src="assets/avant-apres/taxi-apres.jpg" alt="Taxi Pulse, après la refonte" width="1600" height="900" loading="lazy">
+      <img class="ba-before" id="ba-before" src="assets/avant-apres/taxi-avant.jpg" alt="Taxi Pulse, rapport d'origine" width="1600" height="900" loading="lazy">
+      <span class="ba-label ba-l">Avant</span><span class="ba-label ba-r">Après</span>
+      <div class="ba-handle"></div>
+      <input class="ba-range" id="ba-range" type="range" min="0" max="100" value="50" aria-label="Curseur de comparaison avant / après">
+    </div>
+    <div class="ba-info">
+      <p id="ba-text"><b>Taxi Pulse.</b> Avant : une page, deux mesures, trois visuels par défaut. Après : 3 pages de décision, 60 mesures DAX, 5 visuels Deneb.</p>
+      <a class="btn btn-ghost" id="ba-link" href="etude-taxi-pulse.html">Lire l'étude de cas →</a>
+    </div>
   </div>
 </section>
 
@@ -976,6 +1023,50 @@
       setActive(link.getAttribute('href').slice(1));
     });
   });
+})();
+</script>
+
+<script>
+(function(){
+  /* Comparateur avant / après */
+  var D = {
+    taxi:{n:'Taxi Pulse', t:'Avant : une page, deux mesures, trois visuels par défaut. Après : 3 pages de décision, 60 mesures DAX, 5 visuels Deneb.', u:'etude-taxi-pulse.html'},
+    iris:{n:'Projeto Vendas Iris', t:'Avant : un écran unique saturé de visuels et de top 5. Après : 6 pages, une question chacune, 77 mesures DAX et une scorecard d\'actions.', u:'etude-projeto-vendas-iris.html'},
+    diad:{n:'DIAD Champion', t:'Avant : le rapport de formation Microsoft, carte obsolète et titres automatiques. Après : KPI en SVG, écarts ▲▼, phrase d\'analyse dynamique.', u:'etude-diad-champion.html'}
+  };
+  var frame = document.getElementById('ba-frame');
+  if(frame){
+    var range = document.getElementById('ba-range');
+    var set = function(v){ frame.style.setProperty('--p', v + '%'); };
+    range.addEventListener('input', function(){ set(range.value); });
+    Array.prototype.forEach.call(document.querySelectorAll('.ba-tab'), function(b){
+      b.addEventListener('click', function(){
+        var k = b.getAttribute('data-ba'), d = D[k];
+        Array.prototype.forEach.call(document.querySelectorAll('.ba-tab'), function(x){ x.setAttribute('aria-selected', x === b ? 'true' : 'false'); });
+        document.getElementById('ba-after').src = 'assets/avant-apres/' + k + '-apres.jpg';
+        document.getElementById('ba-after').alt = d.n + ', après la refonte';
+        document.getElementById('ba-before').src = 'assets/avant-apres/' + k + '-avant.jpg';
+        document.getElementById('ba-before').alt = d.n + ', rapport d\'origine';
+        document.getElementById('ba-text').innerHTML = '<b>' + d.n + '.</b> ' + d.t;
+        document.getElementById('ba-link').href = d.u;
+        range.value = 50; set(50);
+      });
+    });
+  }
+
+  /* Vidéos : chargées et lues seulement quand elles sont à l'écran ; pas de lecture auto si l'utilisateur réduit les animations */
+  var vids = document.querySelectorAll('video[data-auto]');
+  var calme = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(calme){ Array.prototype.forEach.call(vids, function(v){ v.controls = true; }); return; }
+  if(!('IntersectionObserver' in window)){ Array.prototype.forEach.call(vids, function(v){ v.preload = 'metadata'; v.play().catch(function(){}); }); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      var v = e.target;
+      if(e.isIntersecting){ var p = v.play(); if(p && p.catch){ p.catch(function(){}); } }
+      else if(!v.paused){ v.pause(); }
+    });
+  }, { threshold: 0.35 });
+  Array.prototype.forEach.call(vids, function(v){ io.observe(v); });
 })();
 </script>
 
