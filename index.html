@@ -470,7 +470,10 @@
     color:var(--blue);
     margin-bottom:16px;
   }
-  .formation-item{margin-bottom:16px;}
+  .formation-item{margin-bottom:16px;display:flex;gap:12px;align-items:flex-start;}
+  .formation-item .fl-logo{width:42px;height:42px;font-size:11px;letter-spacing:.3px;}
+  .formation-item .fl-full img{width:100%;height:100%;}
+  .formation-item b .current-badge{display:inline-block;margin-left:6px;vertical-align:middle;}
   .formation-item:last-child{margin-bottom:0;}
   .formation-item b{display:block;font-size:14.5px;}
   .formation-item span{font-size:13px;color:var(--muted);}
@@ -594,14 +597,6 @@
     <div class="hero-card">
       <div class="photo-frame">
         <img src="assets/profile-large.jpg" alt="Smail Boutahor">
-      </div>
-      <div class="hero-float hf-top">
-        <div class="hf-label">Disponible</div>
-        <div class="hf-value">Pour vos projets Power BI</div>
-      </div>
-      <div class="hero-float hf-bottom">
-        <div class="hf-label">Fondateur</div>
-        <div class="hf-value">SB BI Solutions</div>
       </div>
     </div>
   </div>
@@ -946,12 +941,25 @@
         <div class="side-card">
           <h4>🎓 Formation</h4>
           <div class="formation-item">
-            <b>Master Audit et Contrôle de Gestion</b>
-            <span>École nationale de commerce, Agadir — Double diplôme avec Brest Business School · 2021 – 2026</span>
+            <div class="tl-logo fl-logo fl-full"><img src="assets/gem-logo.png" alt="GEM Alpine Business School"></div>
+            <div>
+              <b>Manager du Numérique et des Systèmes d'Information (MNSI) <span class="current-badge">En cours</span></b>
+              <span>GEM Alpine Business School · Sept. 2026 – Sept. 2027</span>
+            </div>
           </div>
           <div class="formation-item">
-            <b>Master grande école, Contrôle de gestion &amp; pilotage de performance</b>
-            <span>Brest Business School, Brest · 2024 – 2026</span>
+            <div class="tl-logo tl-logo-mono fl-logo">BBS</div>
+            <div>
+              <b>Master grande école, Contrôle de gestion &amp; pilotage de performance</b>
+              <span>Brest Business School, Brest · 2024 – 2026</span>
+            </div>
+          </div>
+          <div class="formation-item">
+            <div class="tl-logo tl-logo-mono fl-logo">ENCG</div>
+            <div>
+              <b>Master Audit et Contrôle de Gestion</b>
+              <span>École nationale de commerce, Agadir — Double diplôme avec Brest Business School · 2021 – 2026</span>
+            </div>
           </div>
         </div>
 
