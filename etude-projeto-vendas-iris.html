@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projeto Vendas Iris — étude de cas · Smail Boutahor</title>
+<meta name="description" content="Un tableau de bord de vente surchargé, repensé en 6 pages. Chacune répond à une seule question, de « où en sont les ventes ? » à « où agir en priorité ? ».">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Projeto Vendas Iris : un cockpit commercial">
+<meta property="og:description" content="Un tableau de bord de vente surchargé, repensé en 6 pages. Chacune répond à une seule question, de « où en sont les ventes ? » à « où agir en priorité ? ».">
+<meta property="og:image" content="https://smail-erdg.github.io/assets/avant-apres/iris-apres.jpg">
+<meta property="og:url" content="https://smail-erdg.github.io/etude-projeto-vendas-iris.html">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/etude.css">
+<style>:root{--accent:#5b3fd6;--accent-soft:rgba(91,63,214,0.10);}</style>
+</head>
+<body>
+<header><nav>
+  <a class="back" href="index.html#projets">← Retour aux projets</a>
+  <div class="logo">SB <span>BI Solutions</span></div>
+  <a class="btn btn-primary btn-sm" href="index.html#contact">Me contacter</a>
+</nav></header>
+
+<div class="hero"><div class="container">
+  <span class="kicker">Étude de cas · Pilotage commercial</span>
+  <h1>Projeto Vendas Iris : un cockpit commercial</h1>
+  <p class="lead">Un tableau de bord de vente surchargé, repensé en 6 pages. Chacune répond à une seule question, de « où en sont les ventes ? » à « où agir en priorité ? ».</p>
+  <div class="facts"><div class="fact"><b>6 pages</b><span>une question par page</span></div><div class="fact"><b>77</b><span>mesures DAX</span></div><div class="fact"><b>4</b><span>visuels Deneb</span></div><div class="fact"><b>99,2 %</b><span>de l&#x27;objectif atteint</span></div></div>
+  <div class="tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Groupe de calcul</span><span class="tag">Deneb (Vega-Lite)</span><span class="tag">HTML Content</span></div>
+</div></div>
+
+<main class="container">
+  <section>
+    <div class="two">
+      <div><h2><small>01 · Avant</small>Le point de départ</h2><p>Un écran unique très dense : une quinzaine de visuels, une jauge, trois tableaux top 5 et des couleurs sans signification.</p><p>Les chiffres sont là, mais rien ne dit si la situation est bonne ou mauvaise, ni pourquoi le CA bouge, ni qui relancer.</p></div>
+      <figure><img src="assets/avant-apres/iris-avant.jpg" alt="Projeto Vendas Iris — rapport d'origine" loading="lazy" width="1600" height="900"><figcaption>Le rapport d'origine.</figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <h2><small>02 · Démarche</small>Ce que j'ai fait</h2>
+    <ul class="clean"><li>Une page par question : vue d&#x27;ensemble, analyse des écarts, objectifs et N-1, scorecard, plus un accueil et un lexique.</li><li>Calendrier en années pleines pour des comparaisons N-1 justes ; groupe de calcul Mois / Trimestre / Année appliqué dans les mesures.</li><li>Décomposition de l&#x27;écart de CA en effets prix, volume et mix ; carte de chaleur produit × mois ; quadrant objectif × N-1.</li><li>Une scorecard qui classe les vendeurs, attribue un statut et déduit automatiquement les priorités d&#x27;action.</li></ul>
+  </section>
+
+  <section>
+    <h2><small>03 · Résultat</small>Ce que le rapport révèle</h2>
+    <div class="insights"><div class="insight"><b>−2,3 %</b><p>de CA en 2020 (R$ 1,46 M, −R$ 35,0 K) : c&#x27;est un effet volume (−R$ 38,8 K), pas un effet prix (+R$ 2,3 K).</p></div><div class="insight"><b>6 / 9</b><p>vendeurs sous l&#x27;objectif ; le plus en retard est Tony (96,3 %). 3 vendeurs sont à relancer.</p></div><div class="insight"><b>R$ 144,2 K</b><p>de CA sans vendeur attribué (Super Star, 9,9 %) : hors objectifs, à réaffecter.</p></div></div>
+  </section>
+
+  <section>
+    <h2><small>04 · Les pages</small>6 pages, une question chacune</h2>
+    <div class="gallery"><figure><a href="assets/etudes/iris/01.jpg" target="_blank" rel="noopener"><img src="assets/etudes/iris/01.jpg" alt="Projeto Vendas Iris — Accueil" loading="lazy" width="1600" height="900"></a><figcaption>Accueil : logo, trois chiffres clés, menu et mode d&#x27;emploi.</figcaption></figure><figure><a href="assets/etudes/iris/02.jpg" target="_blank" rel="noopener"><img src="assets/etudes/iris/02.jpg" alt="Projeto Vendas Iris — Vue d&#x27;ensemble" loading="lazy" width="1600" height="900"></a><figcaption>Vue d&#x27;ensemble : CA et objectif, 4 KPI, CA mensuel contre objectif, clients, vendeurs, catégories, synthèse.</figcaption></figure><figure><a href="assets/etudes/iris/03.jpg" target="_blank" rel="noopener"><img src="assets/etudes/iris/03.jpg" alt="Projeto Vendas Iris — Analyse" loading="lazy" width="1600" height="900"></a><figcaption>Analyse : cascade prix / volume / mix, canaux, carte de chaleur produit × mois, arbre de décomposition.</figcaption></figure><figure><a href="assets/etudes/iris/04.jpg" target="_blank" rel="noopener"><img src="assets/etudes/iris/04.jpg" alt="Projeto Vendas Iris — Objectifs &amp; N-1" loading="lazy" width="1600" height="900"></a><figcaption>Objectifs &amp; N-1 : quadrant % objectif × évolution N-1, écarts par vendeur, petits multiples mensuels, simulateur.</figcaption></figure><figure><a href="assets/etudes/iris/05.jpg" target="_blank" rel="noopener"><img src="assets/etudes/iris/05.jpg" alt="Projeto Vendas Iris — Scorecard" loading="lazy" width="1600" height="900"></a><figcaption>Scorecard : classement des vendeurs, statut, tendance 12 mois, clients en recul et priorités d&#x27;action.</figcaption></figure><figure><a href="assets/etudes/iris/06.jpg" target="_blank" rel="noopener"><img src="assets/etudes/iris/06.jpg" alt="Projeto Vendas Iris — Lexique" loading="lazy" width="1600" height="900"></a><figcaption>Lexique : définitions, couleurs et symboles, sources et limites.</figcaption></figure></div>
+  </section>
+
+  <section>
+    <h2><small>05 · Vidéo</small>Le rapport en mouvement</h2>
+    <div class="video-wrap"><video src="assets/projeto-vendas-iris.mp4" poster="assets/posters/projeto-vendas-iris.jpg" controls playsinline preload="none" aria-label="Projeto Vendas Iris — présentation vidéo (50 s)"></video></div>
+  </section>
+
+  <section>
+    <h2><small>06 · Transparence</small>Données et limites</h2>
+    <p class="note">Données de démonstration (ventes et objectifs 2019-2020 : 14 416 lignes de vente, 216 objectifs), exportées du rapport d&#x27;origine. Montants en réais (R$).</p>
+  </section>
+
+  <div class="cta">
+    <h2>Un rapport comme celui-ci pour votre activité ?</h2>
+    <p>Je pars de vos données et de vos décisions, puis je construis le modèle, les mesures et les pages qui y répondent.</p>
+    <div class="row">
+      <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfrWSQZopcLOyCkhCkhhUc2MDidY0ayeoxj_7BFFQ1IcIZH8A/viewform" target="_blank" rel="noopener">📩 Recevoir ce rapport</a>
+      <a class="btn btn-ghost" href="index.html#contact">Me contacter</a>
+    </div>
+  </div>
+
+  <div class="next"><a href="etude-taxi-pulse.html"><small>Étude de cas suivante</small><b>Taxi Pulse : où et quand mettre les taxis</b></a><a href="etude-diad-champion.html"><small>Étude de cas suivante</small><b>DIAD Champion : refonte du rapport DIAD</b></a></div>
+</main>
+
+<footer>© 2026 Smail Boutahor — SB BI Solutions. Tous droits réservés.</footer>
+</body>
+</html>

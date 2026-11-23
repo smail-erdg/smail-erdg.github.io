@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Taxi Pulse — étude de cas · Smail Boutahor</title>
+<meta name="description" content="730 jours de courses de taxis new-yorkais transformés en un outil de décision en 3 pages. Chaque page pose une question et y répond avec un chiffre.">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Taxi Pulse : où et quand mettre les taxis">
+<meta property="og:description" content="730 jours de courses de taxis new-yorkais transformés en un outil de décision en 3 pages. Chaque page pose une question et y répond avec un chiffre.">
+<meta property="og:image" content="https://smail-erdg.github.io/assets/avant-apres/taxi-apres.jpg">
+<meta property="og:url" content="https://smail-erdg.github.io/etude-taxi-pulse.html">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/etude.css">
+<style>:root{--accent:#9a6d00;--accent-soft:rgba(242,200,17,0.16);}</style>
+</head>
+<body>
+<header><nav>
+  <a class="back" href="index.html#projets">← Retour aux projets</a>
+  <div class="logo">SB <span>BI Solutions</span></div>
+  <a class="btn btn-primary btn-sm" href="index.html#contact">Me contacter</a>
+</nav></header>
+
+<div class="hero"><div class="container">
+  <span class="kicker">Étude de cas · Pilotage de flotte</span>
+  <h1>Taxi Pulse : où et quand mettre les taxis</h1>
+  <p class="lead">730 jours de courses de taxis new-yorkais transformés en un outil de décision en 3 pages. Chaque page pose une question et y répond avec un chiffre.</p>
+  <div class="facts"><div class="fact"><b>3 pages</b><span>une question par page</span></div><div class="fact"><b>60</b><span>mesures DAX</span></div><div class="fact"><b>5</b><span>visuels Deneb</span></div><div class="fact"><b>1 650</b><span>taxis manquants à 16 h</span></div></div>
+  <div class="tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Deneb (Vega-Lite)</span><span class="tag">HTML Content</span><span class="tag">Python (simulation)</span></div>
+</div></div>
+
+<main class="container">
+  <section>
+    <div class="two">
+      <div><h2><small>01 · Avant</small>Le point de départ</h2><p>Un rapport de cours : une seule table journalière, deux mesures et trois visuels par défaut (courbe des passagers, CA par jour de semaine, une carte KPI).</p><p>Il décrit l&#x27;activité mais ne répond à aucune question de pilotage : on ne sait ni où ni quand il manque des taxis, ni ce que rapporte une course.</p></div>
+      <figure><img src="assets/avant-apres/taxi-avant.jpg" alt="Taxi Pulse — rapport d'origine" loading="lazy" width="1600" height="900"><figcaption>Le rapport d'origine.</figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <h2><small>02 · Démarche</small>Ce que j'ai fait</h2>
+    <ul class="clean"><li>Poser trois questions de responsable de flotte : l&#x27;activité tient-elle ? Où et quand déployer ? Que rapporte une course ?</li><li>Compléter les données réelles (journalières) par une simulation recalée sur les vrais totaux : découpage par heure et par zone, offre de taxis, météo, coûts.</li><li>Construire 60 mesures DAX, une table de dates dédiée, des synthèses HTML qui se réécrivent avec les filtres et 5 visuels Deneb.</li><li>Un thème sombre avec une seule couleur d&#x27;accent, le jaune taxi. Le vert et le rouge sont réservés aux écarts.</li></ul>
+  </section>
+
+  <section>
+    <h2><small>03 · Résultat</small>Ce que le rapport révèle</h2>
+    <div class="insights"><div class="insight"><b>−4,7 %</b><p>de courses en 2014, mais +3,0 % de CA par course : le CA ne recule que de 1,8 % (2,47 Md$).</p></div><div class="insight"><b>16 h</b><p>La relève des chauffeurs tombe au moment où la demande monte : il manque environ 1 650 taxis chaque jour.</p></div><div class="insight"><b>5,42 $</b><p>restent à l&#x27;opérateur sur 14,98 $ encaissés, après taxes, pourboire, chauffeur, carburant et entretien.</p></div></div>
+  </section>
+
+  <section>
+    <h2><small>04 · Les pages</small>3 pages, une question chacune</h2>
+    <div class="gallery"><figure><a href="assets/etudes/taxi/01.jpg" target="_blank" rel="noopener"><img src="assets/etudes/taxi/01.jpg" alt="Taxi Pulse — Pouls" loading="lazy" width="1600" height="900"></a><figcaption>Pouls : l&#x27;activité tient-elle ? KPI, calendrier des 365 jours, CA mois par mois, jours extrêmes et synthèse.</figcaption></figure><figure><a href="assets/etudes/taxi/02.jpg" target="_blank" rel="noopener"><img src="assets/etudes/taxi/02.jpg" alt="Taxi Pulse — Déployer" loading="lazy" width="1600" height="900"></a><figcaption>Déployer : horloge radiale de la tension (7 jours × 24 h), offre contre besoin heure par heure, zones et décisions chiffrées.</figcaption></figure><figure><a href="assets/etudes/taxi/03.jpg" target="_blank" rel="noopener"><img src="assets/etudes/taxi/03.jpg" alt="Taxi Pulse — Rentabilité" loading="lazy" width="1600" height="900"></a><figcaption>Rentabilité : cascade d&#x27;une course, simulateur de leviers (1 000 taxis de plus à la relève = +8,0 M$ de CA par an), effet de la météo.</figcaption></figure></div>
+  </section>
+
+  <section>
+    <h2><small>05 · Vidéo</small>Le rapport en mouvement</h2>
+    <div class="video-wrap"><video src="assets/taxi-pulse.mp4" poster="assets/posters/taxi-pulse.jpg" controls playsinline preload="none" aria-label="Taxi Pulse — présentation vidéo (47 s)"></video></div>
+  </section>
+
+  <section>
+    <h2><small>06 · Transparence</small>Données et limites</h2>
+    <p class="note">Données réelles : courses journalières des taxis jaunes de New York (2013-2014, jeu de données de cours). Le découpage par heure et par zone, la flotte, la météo et les coûts sont simulés, puis recalés sur les vrais totaux de chaque jour.</p>
+  </section>
+
+  <div class="cta">
+    <h2>Un rapport comme celui-ci pour votre activité ?</h2>
+    <p>Je pars de vos données et de vos décisions, puis je construis le modèle, les mesures et les pages qui y répondent.</p>
+    <div class="row">
+      <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfrWSQZopcLOyCkhCkhhUc2MDidY0ayeoxj_7BFFQ1IcIZH8A/viewform" target="_blank" rel="noopener">📩 Recevoir ce rapport</a>
+      <a class="btn btn-ghost" href="index.html#contact">Me contacter</a>
+    </div>
+  </div>
+
+  <div class="next"><a href="etude-projeto-vendas-iris.html"><small>Étude de cas suivante</small><b>Projeto Vendas Iris : un cockpit commercial</b></a><a href="etude-diad-champion.html"><small>Étude de cas suivante</small><b>DIAD Champion : refonte du rapport DIAD</b></a></div>
+</main>
+
+<footer>© 2026 Smail Boutahor — SB BI Solutions. Tous droits réservés.</footer>
+</body>
+</html>
