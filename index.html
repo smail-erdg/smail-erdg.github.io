@@ -586,7 +586,7 @@
         </a>
       </div>
       <div class="hero-stats">
-        <div class="stat"><b>8</b><span>Rapports Power BI</span></div>
+        <div class="stat"><b>9</b><span>Rapports Power BI</span></div>
         <div class="stat"><b>400M€+</b><span>Périmètre piloté</span></div>
         <div class="stat"><b>2+ ans</b><span>Expérience BI</span></div>
       </div>
@@ -638,8 +638,30 @@
 <section class="projects" id="projets">
   <div class="container">
     <span class="section-tag">Projets phares</span>
-    <h2 class="section-title">8 rapports Power BI, 8 problématiques métier</h2>
+    <h2 class="section-title">9 rapports Power BI, 9 problématiques métier</h2>
     <p class="section-sub">Chaque rapport ci-dessous est un projet complet : modèle de données, mesures DAX et visuels construits pour répondre à une problématique business précise.</p>
+
+    <!-- Project Corporate Spend -->
+    <div class="project-card">
+      <div class="project-media">
+        <video data-auto preload="none" poster="assets/posters/corporate-spend.jpg" src="assets/corporate-spend.mp4?v=1" muted loop playsinline style="width:100%;height:100%;object-fit:contain;border-radius:8px;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"></video>
+        <div class="media-fallback">
+          <div class="mf-icon">📒</div>
+          <div class="mf-text">Corporate Spend<br>(vidéo hébergée sur GitHub)</div>
+        </div>
+      </div>
+      <div class="project-body">
+        <div class="project-tags">
+          <span class="tag tag-powerbi">Power BI</span>
+          <span class="tag tag-dax">DAX</span>
+          <span class="tag tag-cat">Contrôle de gestion · Achats</span>
+        </div>
+        <h3>📒 Corporate Spend : tenir le budget des dépenses</h3>
+        <p>257,5 M$ de dépenses 2026 lues en 3 pages : réel contre budget et N-1, concentration des fournisseurs, centres de coûts en dépassement ou sans budget, pics mensuels. Infobulle personnalisée et extraction du détail (clic droit → Extraire) sur chaque visuel. 67 mesures DAX, totaux réconciliés au centime près avec la source.</p>
+        <div class="usecase">📌 Cas d'usage : Direction financière et achats qui suit la tenue du budget et cible les écarts à justifier (données d'exemple Microsoft ; N-1 et fournisseurs simulés).</div>
+        <div class="project-links"><a class="btn btn-primary" href="etude-corporate-spend.html">Lire l'étude de cas →</a><a class="btn btn-ghost" href="https://docs.google.com/forms/d/e/1FAIpQLSfrWSQZopcLOyCkhCkhhUc2MDidY0ayeoxj_7BFFQ1IcIZH8A/viewform" target="_blank" rel="noopener">📩 Recevoir ce rapport</a></div>
+      </div>
+    </div>
 
     <!-- Project Taxi Pulse -->
     <div class="project-card">
@@ -824,23 +846,24 @@
 <section id="refontes">
   <div class="container">
     <span class="section-tag">Avant / Après</span>
-    <h2 class="section-title">Trois refontes : faites glisser pour comparer</h2>
+    <h2 class="section-title">Quatre refontes : faites glisser pour comparer</h2>
     <p class="section-sub">Le même jeu de données, avant et après. À gauche le rapport d'origine, à droite la version repensée pour la décision.</p>
     <div class="ba-tabs" role="tablist" aria-label="Choisir une refonte">
-      <button class="ba-tab" role="tab" aria-selected="true" data-ba="taxi">🚕 Taxi Pulse</button>
+      <button class="ba-tab" role="tab" aria-selected="true" data-ba="corporate">📒 Corporate Spend</button>
+      <button class="ba-tab" role="tab" aria-selected="false" data-ba="taxi">🚕 Taxi Pulse</button>
       <button class="ba-tab" role="tab" aria-selected="false" data-ba="iris">🎯 Projeto Vendas Iris</button>
       <button class="ba-tab" role="tab" aria-selected="false" data-ba="diad">🏆 DIAD Champion</button>
     </div>
     <div class="ba-frame" id="ba-frame">
-      <img class="ba-after" id="ba-after" src="assets/avant-apres/taxi-apres.jpg" alt="Taxi Pulse, après la refonte" width="1600" height="900" loading="lazy">
-      <img class="ba-before" id="ba-before" src="assets/avant-apres/taxi-avant.jpg" alt="Taxi Pulse, rapport d'origine" width="1600" height="900" loading="lazy">
+      <img class="ba-after" id="ba-after" src="assets/avant-apres/corporate-apres.jpg" alt="Corporate Spend, après la refonte" width="1600" height="900" loading="lazy">
+      <img class="ba-before" id="ba-before" src="assets/avant-apres/corporate-avant.jpg" alt="Corporate Spend, rapport d'origine" width="1600" height="900" loading="lazy">
       <span class="ba-label ba-l">Avant</span><span class="ba-label ba-r">Après</span>
       <div class="ba-handle"></div>
       <input class="ba-range" id="ba-range" type="range" min="0" max="100" value="50" aria-label="Curseur de comparaison avant / après">
     </div>
     <div class="ba-info">
-      <p id="ba-text"><b>Taxi Pulse.</b> Avant : une page, deux mesures, trois visuels par défaut. Après : 3 pages de décision, 60 mesures DAX, 5 visuels Deneb.</p>
-      <a class="btn btn-ghost" id="ba-link" href="etude-taxi-pulse.html">Lire l'étude de cas →</a>
+      <p id="ba-text"><b>Corporate Spend.</b> Avant : l'exemple Microsoft, des écarts de dépassement affichés en vert et une matrice saturée de couleurs. Après : 3 pages de décision, la couleur réservée aux écarts, infobulle et extraction du détail.</p>
+      <a class="btn btn-ghost" id="ba-link" href="etude-corporate-spend.html">Lire l'étude de cas →</a>
     </div>
   </div>
 </section>
@@ -894,7 +917,7 @@
           <ul>
             <li>Conception de rapports Power BI de bout en bout : modélisation de données (star schema), mesures DAX, visuels orientés décision.</li>
             <li>Accompagnement de PME/ETI et de fonctions finance / contrôle de gestion sur leurs projets de reporting et de pilotage de la performance.</li>
-            <li>Livraison de 8 rapports de démonstration couvrant finance &amp; marketing, crypto, immobilier, retail, RH, analyse de marché, pilotage commercial et pilotage de flotte.</li>
+            <li>Livraison de 9 rapports de démonstration couvrant finance &amp; marketing, crypto, immobilier, retail, RH, analyse de marché, pilotage commercial et pilotage de flotte.</li>
           </ul>
         </div>
 
@@ -1030,6 +1053,7 @@
 (function(){
   /* Comparateur avant / après */
   var D = {
+    corporate:{n:'Corporate Spend', t:'Avant : l\'exemple Microsoft, des écarts de dépassement affichés en vert et une matrice saturée de couleurs. Après : 3 pages de décision, la couleur réservée aux écarts, infobulle et extraction du détail.', u:'etude-corporate-spend.html'},
     taxi:{n:'Taxi Pulse', t:'Avant : une page, deux mesures, trois visuels par défaut. Après : 3 pages de décision, 60 mesures DAX, 5 visuels Deneb.', u:'etude-taxi-pulse.html'},
     iris:{n:'Projeto Vendas Iris', t:'Avant : un écran unique saturé de visuels et de top 5. Après : 6 pages, une question chacune, 77 mesures DAX et une scorecard d\'actions.', u:'etude-projeto-vendas-iris.html'},
     diad:{n:'DIAD Champion', t:'Avant : le rapport de formation Microsoft, carte obsolète et titres automatiques. Après : KPI en SVG, écarts ▲▼, phrase d\'analyse dynamique.', u:'etude-diad-champion.html'}

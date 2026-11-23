@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Corporate Spend — étude de cas · Smail Boutahor</title>
+<meta name="description" content="257,5 M$ de dépenses 2026 passées au crible en 3 pages : budget, N-1, fournisseurs, centres de coûts et alertes, avec infobulle et extraction du détail.">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Corporate Spend : tenir le budget des dépenses">
+<meta property="og:description" content="257,5 M$ de dépenses 2026 passées au crible en 3 pages : budget, N-1, fournisseurs, centres de coûts et alertes.">
+<meta property="og:image" content="https://smail-erdg.github.io/assets/avant-apres/corporate-apres.jpg">
+<meta property="og:url" content="https://smail-erdg.github.io/etude-corporate-spend.html">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/etude.css">
+<style>:root{--accent:#B4441B;--accent-soft:rgba(180,68,27,0.12);}</style>
+</head>
+<body>
+<header><nav>
+  <a class="back" href="index.html#projets">← Retour aux projets</a>
+  <div class="logo">SB <span>BI Solutions</span></div>
+  <a class="btn btn-primary btn-sm" href="index.html#contact">Me contacter</a>
+</nav></header>
+
+<div class="hero"><div class="container">
+  <span class="kicker">Étude de cas · Contrôle de gestion et achats</span>
+  <h1>Corporate Spend : tenir le budget des dépenses</h1>
+  <p class="lead">257,5 M$ de dépenses 2026 passées au crible en 3 pages. Chaque page pose une question de direction financière et y répond en 30 secondes.</p>
+  <div class="facts"><div class="fact"><b>3 pages</b><span>une question par page</span></div><div class="fact"><b>67</b><span>mesures DAX</span></div><div class="fact"><b>+14,2 M$</b><span>au-dessus du budget</span></div><div class="fact"><b>0,00 $</b><span>d'écart avec la source</span></div></div>
+  <div class="tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Infobulle personnalisée</span><span class="tag">Extraction (drillthrough)</span><span class="tag">HTML Content</span><span class="tag">Python (simulation)</span></div>
+</div></div>
+
+<main class="container">
+  <section>
+    <div class="two">
+      <div><h2><small>01 · Avant</small>Le point de départ</h2><p>Le rapport d&#x27;exemple Microsoft « IT Spend » : des cartes d&#x27;écart affichées en vert alors qu&#x27;elles signalent un dépassement, une matrice mois × division entièrement colorée, des montants cumulés qui faussent la lecture mois par mois.</p><p>On voit des chiffres, mais on ne sait ni où le budget dérape, ni qui dépense, ni ce qu&#x27;il faut contrôler.</p></div>
+      <figure><img src="assets/avant-apres/corporate-avant.jpg" alt="Corporate Spend — rapport d'origine" loading="lazy" width="1600" height="900"><figcaption>Le rapport d'origine.</figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <h2><small>02 · Démarche</small>Ce que j'ai fait</h2>
+    <ul class="clean"><li>Analyser le modèle source : un an de données mensuelles, réel, budget et trois prévisions, sans fournisseurs ni N-1.</li><li>Poser trois questions de direction financière : tenons-nous le budget ? Où va l&#x27;argent et qui le dépense ? Que faut-il contrôler cette semaine ?</li><li>Ajouter un N-1 et une table de fournisseurs simulés, recalés sur les vraies lignes, puis reconstruire le modèle en étoile et 67 mesures DAX documentées.</li><li>Un thème « registre » : papier ivoire, encre graphite, titres Georgia. La couleur sert uniquement aux écarts : terracotta pour un dépassement, vert pour une économie.</li><li>Une infobulle personnalisée (réel, budget, écart, top 3, tendance 12 mois) et une extraction du détail exportable sur chaque visuel principal.</li><li>Contrôles avant livraison : totaux réconciliés avec la source à 0,00 $, chaque visuel sous 2 s.</li></ul>
+  </section>
+
+  <section>
+    <h2><small>03 · Résultat</small>Ce que le rapport révèle</h2>
+    <div class="insights"><div class="insight"><b>+14,2 M$</b><p>au-dessus du budget (+5,9 %) et +13,5 % sur 2025, alors que le budget prévoyait +7,2 %.</p></div><div class="insight"><b>+23,5 M$</b><p>pour la seule division Infrastructure (+44 %) : plus que l&#x27;écart total.</p></div><div class="insight"><b>46,6 M$</b><p>dépensés par 136 centres de coûts sans aucune ligne de budget, dont 31,6 M$ pour un seul.</p></div></div>
+  </section>
+
+  <section>
+    <h2><small>04 · Les pages</small>3 pages, une question chacune</h2>
+    <div class="gallery"><figure><a href="assets/etudes/corporate/01.jpg" target="_blank" rel="noopener"><img src="assets/etudes/corporate/01.jpg" alt="Corporate Spend — Vue d'ensemble" loading="lazy" width="1600" height="900"></a><figcaption>Vue d&#x27;ensemble : allons-nous tenir le budget ? Réel mois par mois, écart cumulé, catégories et divisions qui dérapent.</figcaption></figure><figure><a href="assets/etudes/corporate/02.jpg" target="_blank" rel="noopener"><img src="assets/etudes/corporate/02.jpg" alt="Corporate Spend — Analyse" loading="lazy" width="1600" height="900"></a><figcaption>Analyse : où va l&#x27;argent ? Pareto des fournisseurs (10 font 80 % des achats), centres de coûts, entités, matrice division × domaine IT.</figcaption></figure><figure><a href="assets/etudes/corporate/03.jpg" target="_blank" rel="noopener"><img src="assets/etudes/corporate/03.jpg" alt="Corporate Spend — Contrôle" loading="lazy" width="1600" height="900"></a><figcaption>Contrôle : que faut-il examiner ? Dépassements de plus de 10 %, dépenses sans budget, pics mensuels inhabituels.</figcaption></figure></div>
+  </section>
+
+  <section>
+    <h2><small>05 · Vidéo</small>Le rapport en mouvement</h2>
+    <div class="video-wrap"><video src="assets/corporate-spend.mp4" poster="assets/posters/corporate-spend.jpg" controls playsinline preload="none" aria-label="Corporate Spend — présentation vidéo"></video></div>
+  </section>
+
+  <section>
+    <h2><small>06 · Transparence</small>Données et limites</h2>
+    <p class="note">Données d&#x27;exemple Microsoft (IT Spend Analysis) : réel, budget et prévision de l&#x27;exercice 2014, décalés en 2026, montants × 0,3 comme dans le rapport d&#x27;origine. Le réel 2025 (N-1) et les fournisseurs (noms fictifs) sont simulés, puis rattachés aux vraies lignes de dépense ; les totaux réels ne changent pas.</p>
+  </section>
+
+  <div class="cta">
+    <h2>Un rapport comme celui-ci pour vos dépenses ?</h2>
+    <p>Je pars de vos extractions (SAP, ERP, Excel) et de vos règles de gestion, puis je construis le modèle, les mesures et les pages qui y répondent.</p>
+    <div class="row">
+      <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfrWSQZopcLOyCkhCkhhUc2MDidY0ayeoxj_7BFFQ1IcIZH8A/viewform" target="_blank" rel="noopener">📩 Recevoir ce rapport</a>
+      <a class="btn btn-ghost" href="index.html#contact">Me contacter</a>
+    </div>
+  </div>
+
+  <div class="next"><a href="etude-taxi-pulse.html"><small>Étude de cas suivante</small><b>Taxi Pulse : où et quand mettre les taxis</b></a><a href="etude-projeto-vendas-iris.html"><small>Étude de cas suivante</small><b>Projeto Vendas Iris : un cockpit commercial</b></a></div>
+</main>
+
+<footer>© 2026 Smail Boutahor — SB BI Solutions. Tous droits réservés.</footer>
+</body>
+</html>
